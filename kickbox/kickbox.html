@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KICKBOXING</title>
+		
+		
+
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+	
+<script>
+
+	document.ready(function(){
+	$("#slide1").mouseover(function(){
+		$("#slide h3").slideDown();
+	});
+	$("#slide1").mouseout(function(){
+		$("#slide h3").slideUp();
+	});
+	});
+</script>
+
+<script type="text/javascript">
+	
+	function validate()
+	{	
+		var cnf=confirm("DO YOU WANT TO SUBMIT THE FORM");
+		if(cnf==true){
+		name=document.getElementById('nm').value;
+		email=document.getElementById('em').value;
+		phone=parseInt(document.getElementById('ph').value);
+		
+		regname=/^[a-z]+ [a-z]+$/i;
+		regemail=/^[a-z_0-9]+@[a-z]+\.(com|in|edu|gov)$/;
+		regphone=/^[0-9]{10}$/;
+
+
+		if(name=="" || email=="" || phone=="" || add==""){
+
+		}
+		else{
+			if(regname.test(name)){
+				if(regemail.test(email)){
+					if(regphone.test(phone)){
+						document.getElementById('kick').setAttribute('action',"../phpfiles/kickbox.php");
+					}
+				}
+			}
+			else
+				alert("inputs not valid");
+
+
+	}
+				
+		
+
+		}
+		
+	}
+</script>
+
+</head>
+<body style="background-color: black; 	font-family: 'Open Sans', sans-serif;
+	color: white;">
+
+<div class="container-fluid">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+			<a class="navbar-brand" href="#"><img src="../img/logo.png"></a>
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#men"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="men">
+				<ul class="navbar-nav m-auto">
+					<li class="nav-item"><a class="nav-link" href="../index/home.html">HOME</a></li>
+					<li class="nav-item"><a class="nav-link">TRANSFORMATIONS</a></li>
+					<li class="nav-item"><a class="nav-link" href="home.html">INQUIRY</a></li>
+
+				</ul>
+		</div>
+
+		</nav>
+	</div>
+
+<div class="sec-4 box">
+	<h1 style="	text-transform: uppercase; margin-left: 1em;">KICKBOXING</h1>
+	<div>
+		<img src="kick.jpg" height="430px" width="440px" style="margin-top: -2em; margin-left: 50em;">
+	</div>
+	<h4 style="margin-right: 30em; margin-top: -14em; margin-left: 1em;">
+	All kickboxing tactics are based on seven principles: distancing, defense, feinting, timing, power, endurance and sparring. In this article, I’ll explain what they are and how you can improve them. Whether you’re a kickboxer or a practitioner of some other martial art, they’re guaranteed to improve your game. When you think of formulas and principles, you don’t normally envision kickboxing. If you’re like me, you probably think of chemistry or physics — subjects few of us know much about. If you learn them, you’ll flourish. If you don’t and your opponent does, you’ll be doomed.</h4>
+	<br>
+	<br>
+	<button class="btn btn-success" data-toggle="modal" data-target="#applykar" style="color: white; margin-left: 30px; ; border-radius: .2em; font-size: 35px;">
+			&nbspAPPLY NOW&nbsp
+		</button>
+		 <!-- The Modal -->
+  <div class="modal" id="applykar">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header text-light badge-info">
+          <h4 class="modal-title ">KARATE APPLICATION</h4>
+          <button type="button" class="close" data-dismiss="modal"><sapn> x </span> </button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="card">
+          	<form method="post" action="" id="kick">
+          		<div class="card-body text-dark">
+
+						<label>FULL NAME</label><input type="text" name="nm" id="nm" class="form-control" required>
+
+						<label>EMAIL</label><input type="text" name="em"  id="em" class="form-control" required>
+
+						<label>PHONE</label><input type="text" name="ph" id="ph"  class="form-control" maxlength="10" required>
+
+						<label>ADDRESS</label><textarea rows="2" cols="64" id="add" name="add" class="form-control" required></textarea>
+
+						<label>GENDER&nbsp&nbsp&nbsp&nbsp</label>
+						<input type="radio" name="gender"id="gen" value="male" required><label>MALE&nbsp
+						</label>
+						<input type="radio" name="gender" id="gen" value="female" required><label>FEMALE</label>
+						<br>
+						<label>FEES</label><input type="text" readonly name="fees"  id="fees" value="799" class="form-control"><br>
+						<button  type="SUBMIT" id="sub_btn" class="form-control" onclick="validate()">SUBMIT</button>
+					</div>
+          	</form>
+          </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger form-control" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-3 box"> </div>
+
+<div class="section2">
+	<div class="container" id="slide1" style="float: left;">
+	  <img src="box.jpg" alt="Avatar" class="image" width="50%" height="30%">
+	  <div class="overlay">
+	    <div class="text" style="text-align: middle;">
+	      <h3 style="font-family: georgia;">I fear not the man who has practiced 10,000 kicks once, <br>but I fear the man who has practiced one kick 10,000 times.<br><br><span style="text-align: right;">Bruce Lee</span></h3>   
+	    </div>
+	  </div>
+	</div>
+
+	<div class="container" id="slide2" style="float: right; margin-top: -41.5em;">
+	  <img src="box1.jpg" alt="Avatar" class="image" width="50%" height="30%">
+	  <div class="overlay">
+	    <div class="text" style="text-align: middle;">
+	      <h3 style="font-family: georgia;">You had women's kickboxing and they're in the ring <br>and that's what I want to do. I just wanted to fight.</h3>   
+	    </div>
+	  </div>
+	</div>
+</div>
+
+
+
+
+
+<div class="sec-5 box"> </div>
+
+<div class="sec-6 box">
+	<div>
+		<img src="fin.png" height="500px" width="1500px" style="margin-left: -2.5em; margin-top: -7em;">
+	
+	</div>
+</div>
+
+</body>
+</html>

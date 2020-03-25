@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900&display=swap');
+.navbar{
+	background-color: rgba(0,0,0,.9)!important;
+}
+.container-fluid{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+	color: white;
+	font-weight: bolder;
+	padding-left: 30px;
+	font-size: 20px;
+	font-family: 'Lato',sans-serif;
+}
+
+
+#sub_btn{
+	background-color: green;
+	color: white;
+
+}
+nav .navbar-brand img{
+
+	height:50px; width: 175px;
+}
+
+*{
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+	}
+
+	.box{
+		height: 800px;
+		width: 1518px;
+	}
+	
+	.sec-3{
+		height: 10vh;
+		background-image: url(win.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		font-family: garamond;
+	}
+
+	.sec-4{
+		padding: 3em;
+		padding-top: 7em;
+		background: black;
+		color: rgb(225,225,225);
+		font-family: garamond;
+    	font-size: 20px;
+    }
+
+	.sec-5{
+		height: 10vh;
+		background-image: url(ring.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	.sec-6{
+		padding: 3em;
+		padding-top: 10em;
+		background: black;
+		color: grey;
+		font-family: garamond;
+    	font-size: 20px;
+    }
+
+    .container {
+ 		position: relative;
+ 		width: 50%;
+ 		height:50%;
+	}
+
+	.image {
+  	display: block;
+  	width: 100%;
+  	height: auto;
+	}
+
+
+
+	.container:hover .overlay {
+  	bottom: 0;
+  	height: 100%;
+	}
+
+	.text {
+  	white-space: nowrap; 
+  	color: white;
+  	font-size: 20px;
+  	position: absolute;
+  	overflow: hidden;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	-ms-transform: translate(-50%, -50%);
+	}

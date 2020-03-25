@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900&display=swap');
+body{
+	background-image: url(../img/join_now/d.jpeg);	
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+}
+.navbar{
+	background-color: rgba(0,0,0,.9)!important;
+}
+.container-fluid{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+	color: white;
+	font-weight: bolder;
+	padding-left: 30px;
+	font-size: 20px;
+	font-family: 'Lato',sans-serif;
+}
+
+
+
+nav .navbar-brand img{
+
+	height:50px; width: 175px;
+}
+
+#start{
+	padding-top: 100px;
+	}
+
+#row1 h3,h2,h4{
+	font-family: 'Lato',sans-serif;
+	font-weight: bold;
+}
+#head{
+	border-radius: 10px;
+	color:white;
+	font-family: 'Lato',sans-serif;
+	font-weight: bolder;
+	font-size: 35px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: rgba(112,175,86,.6);
+}
+.card{
+
+background-color: rgba(30,42,18,0.7);
+
+}
+label{
+	font-weight: bolder;
+	color: white;
+}
+
+#sub_btn{
+	background-color: rgb(112,175,86);
+	font-size: 23px;
+	font-weight: bolder;
+	color: white;
+
+
+}
+
+#sub_btn:hover{
+	background-color: green;
+	font-size: 23px;
+	font-weight: bolder;
+	color: white;
+	
+
+}

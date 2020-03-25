@@ -1,0 +1,14 @@
+#################     TOUGH GENERATION PHP QUERIES DOC       ##########################
+create database tg;
+
+use tg;
+
+create table diet_clients (diet_clients_srno int auto increment primary key , name varchar(100), 
+email varchar(100), gender varchar(10),address varchar(300), phone int , course varchar(50), monthly_fees int);
+
+create table kickbox_clients (kickbox_clients_srno int auto increment primary key , name varchar(100),email varchar(100), gender varchar(10),address varchar(300), phone int , monthly_fees int);
+
+
+
+
+

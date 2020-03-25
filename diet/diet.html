@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign-up form</title>
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style2.css">
+
+<!---javascript---->
+<script lag="javascript">
+	function test(){
+
+		ans=validate();
+		if (ans==true){
+			document.getElementById('fmnm').setAttribute('action',"../phpfiles/diet.php");
+		}
+
+		else {alert("invalid inputs. Please enter first name and last name ,correct email address and phone number");}
+
+	}
+function fee(){
+	var plan=document.getElementById('plan').value;
+		if(plan=="weight loss"){
+			document.getElementById('fees').setAttribute('value','999');
+			
+		}
+		else if(plan=="weight gain"){
+			document.getElementById('fees').setAttribute('value','1499');
+		}
+		else if(plan=="sports diet"){
+			document.getElementById('fees').setAttribute('value','2499');
+		}
+		else if(plan=="balanced diet"){
+			document.getElementById('fees').setAttribute('value','2999');
+		}
+		else if(plan=="vegan"){
+			document.getElementById('fees').setAttribute('value','3499');
+		}
+}
+
+	function validate()
+	{	
+		var cnf=confirm("DO YOU WANT TO SUBMIT THE FORM");
+		if(cnf==true){
+		name=document.getElementById('nm').value;
+		email=document.getElementById('em').value;
+		phone=parseInt(document.getElementById('ph').value);
+		
+		regname=/^[a-z]+ [a-z]+$/i;
+		regemail=/^[a-z_0-9.]+@[a-z]+\.(com|in|edu|gov)$/;
+		regphone=/^[0-9]{10}$/;
+
+
+		if(name==""|| email==""||phone==""||add==""){
+
+		}
+		else{
+			if(!regname.test(name)){
+				return false;
+				}
+				if(!regemail.test(email)){ 
+						return false;}
+
+					if(!regphone.test(phone)){
+							return false;
+
+						}
+
+			
+			else
+				{return true;}
+
+
+	}
+				
+		
+
+		}
+		
+	}
+</script>
+
+
+</head>
+<body>
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+			<a class="navbar-brand" href="#"><img src="../img/logo.png"></a>
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#men"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="men">
+				<ul class="navbar-nav m-auto">
+					<li class="nav-item"><a class="nav-link" href="../index.html">HOME</a></li>
+					<li class="nav-item"><a class="nav-link">TRANSFORMATIONS</a></li>
+					
+
+				</ul>
+		</div>
+
+		</nav>
+	</div>
+<div class="container" id="start">
+
+	<div class="row" id="row1">
+		<div class="col-md-7">
+			<br><br><br><br>
+			<hr color=white width=30% align="center">
+			<h4 class="text-center">LOOKING GOOD AND FEELING GOOD GO HAND IN HAND. IF YOU HAVE A HEALTHY LIFESTYLE, YOU DIET AND NUTRITION ARE SET, AND NOW YOU'RE WORKING OUT, YOU'RE GOING TO FEEL GOOD</h4>
+			<hr color=white width=30% align="center"><br><br>
+			<h2 class="text-center">WE BELIEVE IN</h2><br><br>
+			<h3 class="text-center">"TO EAT IS A NECESSITY, BUT TO EAT INTELLIGENTLY IS AN ART"</h3>
+		</div>
+
+		<div class="col-md-5 card">
+			<form method="post" action="" id="fmnm">
+				<div class="card-header"><h2 class="text-center" id="head">JOIN NOW</h2>
+				</div>
+					<div class="card-body">
+
+						<label>FULL NAME</label><input type="text" name="nm" id="nm" class="form-control" required>
+
+						<label>EMAIL</label><input type="text" name="em"  id="em" class="form-control" required>
+
+						<label>PHONE</label><input type="text" name="ph" id="ph"  class="form-control" maxlength="10" required>
+
+						<label>ADDRESS</label><textarea rows="2" cols="64" id="add" name="add" class="form-control" required></textarea>
+
+						<label>GENDER&nbsp&nbsp&nbsp&nbsp</label>
+						<input type="radio" name="gender"id="gen" value="male" required><label>MALE&nbsp
+						</label>
+						<input type="radio" name="gender" id="gen" value="female" required><label>FEM ALE</label>
+						<br>
+
+						<label>AIM</label>
+						<select name="pla" class="form-control" id="plan"  onmouseleave="fee()">
+							<option value="weight loss">WEIGHT LOSS</option>
+							<option value="weight gain">WEIGHT GAIN</option>
+							<option value="sports diet">SPORTS DIETS PALN</option>
+							<option value="balances diet">BALANCED DIET</option>
+							<option value="vegan">VEGAN DIET</option>
+						</select>
+						<label>FEES/month</label><input type="text" readonly name="fees"  id="fees" value="" class="form-control"><br>
+						<button  type="SUBMIT" id="sub_btn" class="form-control" onclick="test()">SUBMIT</button>
+					</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
