@@ -1,6 +1,8 @@
 #################     TOUGH GENERATION PHP QUERIES DOC       ##########################
 create database tg;
 
+adding a single for assignment purpose (kindly ignore this line)
+
 use tg;
 
 create table diet_clients (diet_clients_srno int auto increment primary key , name varchar(100), 
