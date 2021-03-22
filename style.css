@@ -3,8 +3,8 @@
 
 body{
 	font-family: 'Open Sans', sans-serif;
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: red;
 }
 .container-fluid{
 	padding: 0px;
